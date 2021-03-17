@@ -16,5 +16,9 @@
 
 * {
   box-sizing: border-box;
-  border: 1px black solid;
+  /*border: 1px red solid;*/
+}
+
+body{
+  background-color: #546474;
 }
