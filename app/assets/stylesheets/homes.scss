@@ -53,11 +53,19 @@
 .side {
   background-color: aquamarine;
   width: 230px;
-  height: 1000px;
+  height: 100vh;
 }
 
 .main {
   background-color: blue;
   width: calc(100vw - 230px);
-  height: 1000px;
+  height: 100vh;
+}
+
+.user-registration {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
