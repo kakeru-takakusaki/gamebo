@@ -1,11 +1,11 @@
 <header class='top-page-header'>
   <div>
-    <h1 class='logo'>Logo</h1>
+    <h1 class='logo'><%= link_to 'Logo', root_path %></h1>
   </div>
   <div>
     <ul class='header-list'>
       <% if user_signed_in? %>
-        <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
+        <li><%= link_to current_user.nickname, home_path(current_user.id), class: "user-nickname" %></li>
         <li><%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "logout" %></li>
       <% else %>
         <li><%= link_to 'Log in', new_user_session_path, class: "login" %></li>
