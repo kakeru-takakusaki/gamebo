@@ -8,4 +8,7 @@ class User < ApplicationRecord
     validates :nickname,      uniqueness: true
   end
 
+  has_many :room_users
+  has_many :rooms, through: :room_users
+
 end
