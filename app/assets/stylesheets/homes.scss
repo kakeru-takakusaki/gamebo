@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+// トップページのCSS
+
 .top-page-header {
   display: flex;
   justify-content: space-between;
@@ -9,6 +12,10 @@
   .logo {
     font-size: 40px;
     margin: 0 20px;
+    a {
+      text-decoration: none;
+      color: white;
+    }
   }
 }
 
@@ -61,6 +68,9 @@
   width: calc(100vw - 230px);
   height: 100vh;
 }
+
+
+// ログイン・新規登録のCSS
 
 .user-registration {
   display: flex;
