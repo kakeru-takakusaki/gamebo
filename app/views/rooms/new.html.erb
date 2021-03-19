@@ -5,7 +5,7 @@
   <%= form_with model: @room, local: true do |f| %>
     <div>
       <div><%= f.label :ルーム名 %></div>
-      <div><%= f.text_field :nickname %></div>
+      <div><%= f.text_field :name %></div>
     </div>
 
     <div>
@@ -15,7 +15,7 @@
           <option value=<%= user.id %>><%= user.nickname %></option>
         <% end %>
       </select>
-      <input name="room[user_ids][]" type="hidden" value=<%= current.id %>>
+      <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
     </div>
 
     <div>
