@@ -1,13 +1,3 @@
 <div class='side'>
   <%= link_to 'ルーム作成', new_room_path %>
-
-  <div class='rooms'>
-    <% current_user.rooms.each do |room| %>
-      <div class="room">
-        <div class="room-name">
-          <a href="#"><%= room.name %></a>
-        </div>
-      </div>
-    <% end %>
-  </div>
 </div>
