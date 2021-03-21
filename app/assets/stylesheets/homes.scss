@@ -9,6 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 70px;
   .logo {
     font-size: 40px;
     margin: 0 20px;
@@ -60,13 +61,13 @@
 .side {
   background-color: aquamarine;
   width: 230px;
-  height: 100vh;
+  height: calc(100vh - 70px);
 }
 
 .main {
   background-color: blue;
   width: calc(100vw - 230px);
-  height: 100vh;
+  height: calc(100vh - 70px);
 }
 
 
