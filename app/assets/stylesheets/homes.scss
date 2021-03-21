@@ -65,9 +65,16 @@
 }
 
 .main {
-  background-color: blue;
+  background-color: rgb(47, 144, 235);
   width: calc(100vw - 230px);
   height: calc(100vh - 70px);
+  .messages {
+    height: calc(100vh - 70px - 90px);
+  }
+  .form {
+    background-color: white;
+    height: 90px;
+  }
 }
 
 
