@@ -103,9 +103,49 @@
     padding: 40px 40px 0;
   }
   .form {
-    background-color: white;
+    background-color: rgb(99, 99, 99);
     height: 60px;
-    padding: 20px 40px;
+    padding: 15px 30px;
+    display: flex;
+    .form-input {
+      background-color: white;
+      display: flex;
+      width: 100%;
+      border-radius: 7px;
+      .form-message {
+        background-color: white;
+        border: none;
+        height: 30px;
+        width: 100%;
+        padding-left: 10px;
+        border-radius: 7px;
+      }
+      .form-image {
+        font-size: 12px;
+        background-color: lightblue;
+        color: white;
+        padding: 0 10px;
+        width: 60px;
+        margin: 5px 5px;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+        .hidden {
+          display: none;
+        }
+      }
+    }
+    .form-submit {
+      background-color: gray;
+      color: whitesmoke;
+      font-size: 17px;
+      height: 30px;
+      padding: 0 10px;
+      margin-left: 15px;
+      border: none;
+      border-radius: 7px;
+      overflow: scroll;
+    }
   }
 }
 
