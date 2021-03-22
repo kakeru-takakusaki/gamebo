@@ -81,7 +81,7 @@
 }
 
 .chat {
-  background-color: rgb(47, 144, 235);
+  background-color: rgb(151, 180, 206);
   width: calc(100vw - 230px);
   height: calc(100vh - 70px);
   .chat-header {
@@ -119,34 +119,34 @@
         width: 100%;
         padding-left: 10px;
         border-radius: 7px;
+        resize: none;
+        outline: none;
+        padding-top: 2px;
       }
       .form-image {
-        font-size: 12px;
+        font-size: 15px;
         background-color: lightblue;
         color: white;
         padding: 0 10px;
-        width: 60px;
+        width: 50px;
         margin: 5px 5px;
         text-align: center;
         border: none;
         border-radius: 5px;
-        .hidden {
-          display: none;
-        }
       }
     }
     .form-submit {
-      background-color: gray;
-      color: whitesmoke;
-      font-size: 17px;
-      height: 30px;
-      padding: 0 10px;
+      text-align: center;
+      font-size: 21px;
       margin-left: 15px;
-      border: none;
-      border-radius: 7px;
-      overflow: scroll;
+      padding: 1px;
+      color: lightblue;
     }
   }
+}
+
+.hidden {
+  display: none;
 }
 
 
