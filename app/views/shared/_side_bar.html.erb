@@ -1,5 +1,5 @@
 <div class='side'>
-  <%= link_to 'ルーム作成', new_room_path %>
+  <%= link_to 'ルーム作成', new_room_path, class: 'new-room' %>
 
   <div class='rooms'>
     <% current_user.rooms.each do |room| %>
