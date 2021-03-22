@@ -1,12 +1,13 @@
 <div class='chat-header'>
   <div class='chat-header-title'>
-    hoge
+    <%= @room.name %>
   </div>
   <div class='chat-header-button'>
-    huga
+    <i class="fas fa-list"></i>
   </div>
 </div>
 <div class='messages'>
+  <%= render partial: 'shared/message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
