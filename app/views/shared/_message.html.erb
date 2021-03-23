@@ -1,12 +1,13 @@
 <% if current_user.id == message.user.id %>
   <div class="message message-right">
 
+    
     <div class="lower-message">
-      <div class="message-content">
-        <%= message.text %>
+      <div class="message-text right-text">
+        <%= simple_format(message.text) %>
       </div>
       <div class="message-date">
-        <%= l message.created_at %>
+        <%= message.created_at.strftime("%p %I:%M") %>
       </div>
     </div>
 
@@ -16,21 +17,22 @@
 
     <div class="upper-message">
       <div class='chat-icon'>
-        <i class="far fa-user"></i>
-      </div>
-      <div class="message-user">
-        <%= message.user.nickname %>
+        <i class="far fa-user user-icon"></i>
       </div>
     </div>
 
     <div class="lower-message">
-      <div class="message-content">
-        <%= message.text %>
+      <div class="message-user">
+        <%= message.user.nickname %>
+      </div>
+      <div class="message-text left-text">
+        <%= simple_format(message.text) %>
       </div>
       <div class="message-date">
-        <%= l message.created_at %>
+        <%= message.created_at.strftime("%p %I:%M") %>
       </div>
     </div>
+    
 
   </div>
 <% end %>
