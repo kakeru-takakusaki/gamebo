@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  height: 50px;
   padding: 0 20px;
   .logo {
     font-size: 40px;
@@ -28,18 +28,17 @@
   li {
     display: inline-block;
     color: #FFF;
-    line-height: 50px;
     border-radius: 10px;
     text-align: center;
     overflow: hidden;
     background-image: linear-gradient(45deg, #111c35 0%, #a5a5a5 100%);
     outline: none;
-    font-size: 21px;
-    margin: 0 10px;
+    font-size: 15px;
+    margin-left: 7px;
     a {
       color: #FFF;
-      width: 120px;
-      height: 50px;
+      width: 80px;
+      height: 30px;
       display: inline-block;
       text-decoration: none;
       transition: .4s;
@@ -93,10 +92,30 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100vh - 15px);
+
+  h2 {
+    color: white;
+  }
+
+  .form-text-wrap {
+    color: white;
+  }
+
+  .input-default {
+    font-size: 20px;
+    height: 28px;
+    width: 35vw;
+    resize: none;
+    outline: none;
+  }
 }
 .log-sign {
   text-decoration: none;
   outline: none;
+  color: white;
+  height: 15px;
+}
+.log-sign:hover {
   color: lightblue;
 }
