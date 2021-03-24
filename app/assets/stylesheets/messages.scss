@@ -90,6 +90,12 @@
       }
     }
 
+    .message-image-right {
+      float: right;
+      clear: both;
+      margin-bottom: 7px;
+    }
+
     .message-left {
       float: left;
       clear: both;
@@ -98,6 +104,12 @@
         background-color: whitesmoke;
         border: 2px solid white;
       }
+    }
+
+    .message-image-left {
+      float: left;
+      clear: both;
+      margin-bottom: 7px;
     }
   }
 
