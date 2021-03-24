@@ -141,6 +141,45 @@
 
 // ログイン・新規登録のCSS
 
+.in-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px;
+  background-color: #24272b;
+
+  .logo-div {
+    display: flex;
+
+    .logo {
+      font-size: 40px;
+      margin: 0 20px;
+      a {
+        text-decoration: none;
+        color: #82c0cd;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+      }
+
+      .logo-i {
+        color: #82c0cd;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .log-sign {
+    text-decoration: none;
+    outline: none;
+    color: white;
+    height: 15px;
+  }
+  .log-sign:hover {
+    color: lightblue;
+  }
+}
+
 .user-registration {
   display: flex;
   justify-content: space-around;
@@ -163,13 +202,4 @@
     resize: none;
     outline: none;
   }
-}
-.log-sign {
-  text-decoration: none;
-  outline: none;
-  color: white;
-  height: 15px;
-}
-.log-sign:hover {
-  color: lightblue;
 }
