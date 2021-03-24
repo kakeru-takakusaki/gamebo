@@ -17,7 +17,11 @@
     <div class="message message-left">
       <div class="upper-message">
         <div class='chat-icon'>
-          <i class="far fa-user user-icon"></i>
+          <% if message.user.image.attached? %>
+            <%= image_tag message.user.image.variant(resize: '100x100') %>
+          <% else %>
+            <i class="far fa-user user-icon-i"></i>
+          <% end %>
         </div>
       </div>
 
