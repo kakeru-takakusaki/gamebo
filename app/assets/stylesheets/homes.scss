@@ -26,6 +26,7 @@
   list-style: none;
   display: flex;
   align-items: center;
+  font-weight: bold;
   li {
     display: inline-block;
     color: #FFF;
@@ -64,7 +65,7 @@
   background-color: #546474;
   width: 230px;
   height: calc(100vh - 50px);
-  padding: 0 20px;
+  padding: 0 15px;
   overflow: scroll;
   position: relative;
 
@@ -74,11 +75,27 @@
     text-decoration: none;
     color: white;
   }
+
+  .side-title {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 5px;
+
+    .side-title-mark {
+      color: white;
+      margin-right: 5px;
+      font-size: 17px;
+    }
+  }
+
   .room {
-    padding: 10px 10px;
+    padding: 10px 10px 10px 20px;
     .room-name a {
       text-decoration: none;
       color: white;
+      font-size: 15px;
+      font-weight: bold;
     }
   }
 
