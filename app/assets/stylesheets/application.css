@@ -16,9 +16,13 @@
 
 * {
   box-sizing: border-box;
-  /*border: 1px red solid;*/
+  /* border: 1px red solid; */
 }
 
 body{
   background-color: #546474;
+}
+
+.hidden {
+  display: none;
 }
