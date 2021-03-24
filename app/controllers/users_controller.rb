@@ -1,11 +1,15 @@
 class UsersController < ApplicationController
+before_action :set_user, only: [:show, :edit, :update]
+
+  def show
+  end
 
   def edit
   end
 
   def update
-    if current_user.update(user_params)
-      redirect_to root_path
+    if @user.update(user_params)
+      redirect_to user_path(@user.id)
     else
       render :edit
     end
@@ -13,8 +17,12 @@ class UsersController < ApplicationController
 
   private
 
+  def set_user
+    @user = User.find(params[:id])
+  end
+
   def user_params
-    params.require(:user).permit(:nickname, :email, :image)
+    params.require(:user).permit(:nickname, :email, :image, :profile_text)
   end
 
 end
