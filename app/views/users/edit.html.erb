@@ -1,1 +1,13 @@
 <%= render "shared/header" %>
+
+<div class='content'>
+  <%= render "shared/side_bar" %>
+  <div class='main'>
+    <%= form_with model: @user do |f| %>
+      <%= f.text_field :nickname, placeholder: 'ニックネーム' %>
+      <%= f.file_field :image %>
+      <%= f.text_area :profile_text %>
+      <%= f.submit '保存' %>
+    <% end %>
+  </div>
+</div>
