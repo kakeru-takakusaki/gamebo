@@ -33,7 +33,7 @@
     border-radius: 30px;
     text-align: center;
     overflow: hidden;
-    background-image: linear-gradient(45deg, #24272b 0%, #a5a5a5 100%);
+    background-image: linear-gradient(45deg, #2a2e31 0%, #797979 100%);
     outline: none;
     font-size: 15px;
     margin-left: 7px;
@@ -42,9 +42,10 @@
       color: #FFF;
       width: 80px;
       height: 30px;
-      display: inline-block;
+      display: block;
       text-decoration: none;
       transition: .4s;
+      overflow: hidden;
     }
     a:hover {
       color: rgb(175, 175, 175);
@@ -69,18 +70,12 @@
   overflow: scroll;
   position: relative;
 
-  .new-room {
-    display: inline-block;
-    padding: 10px 10px;
-    text-decoration: none;
-    color: white;
-  }
-
   .side-title {
     color: white;
     font-size: 17px;
     font-weight: bold;
     margin-top: 5px;
+    margin-bottom: 5px;
 
     .side-title-mark {
       color: white;
@@ -90,7 +85,7 @@
   }
 
   .room {
-    padding: 10px 10px 10px 20px;
+    padding: 10px 10px 0 20px;
     .room-name a {
       text-decoration: none;
       color: white;
