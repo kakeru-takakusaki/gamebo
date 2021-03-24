@@ -1,38 +1,38 @@
 <% if current_user.id == message.user.id %>
-  <div class="message message-right">
-
-    
-    <div class="lower-message">
-      <div class="message-text right-text">
-        <%= simple_format(message.text) %>
-      </div>
-      <div class="message-date">
-        <%= message.created_at.strftime("%p %I:%M") %>
+  <% if message.text.present? %>
+    <div class="message message-right">
+      <div class="lower-message">
+        <div class="message-text right-text">
+          <%= simple_format(message.text) %>
+        </div>
+        <div class="message-date">
+          <%= message.created_at.strftime("%p %I:%M") %>
+        </div>
       </div>
     </div>
-
-  </div>
+  <% end %>
+  <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image-right' if message.image.attached? %>
 <% else %>
-  <div class="message message-left">
+  <% if message.text.present? %>
+    <div class="message message-left">
+      <div class="upper-message">
+        <div class='chat-icon'>
+          <i class="far fa-user user-icon"></i>
+        </div>
+      </div>
 
-    <div class="upper-message">
-      <div class='chat-icon'>
-        <i class="far fa-user user-icon"></i>
+      <div class="lower-message">
+        <div class="message-user">
+          <%= message.user.nickname %>
+        </div>
+        <div class="message-text left-text">
+          <%= simple_format(message.text) %>
+        </div>
+        <div class="message-date">
+          <%= message.created_at.strftime("%p %I:%M") %>
+        </div>
       </div>
     </div>
-
-    <div class="lower-message">
-      <div class="message-user">
-        <%= message.user.nickname %>
-      </div>
-      <div class="message-text left-text">
-        <%= simple_format(message.text) %>
-      </div>
-      <div class="message-date">
-        <%= message.created_at.strftime("%p %I:%M") %>
-      </div>
-    </div>
-    
-
-  </div>
+  <% end %>
+  <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image-left' if message.image.attached? %>
 <% end %>
