@@ -12,12 +12,24 @@
   height: 50px;
   padding: 0 20px;
   background-color: #24272b;
-  .logo {
-    font-size: 40px;
-    margin: 0 20px;
-    a {
-      text-decoration: none;
-      color: white;
+
+  .logo-div {
+    display: flex;
+
+    .logo {
+      font-size: 40px;
+      margin: 0 20px;
+      a {
+        text-decoration: none;
+        color: #82c0cd;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+      }
+
+      .logo-i {
+        color: #82c0cd;
+        margin-left: 5px;
+      }
     }
   }
 }
