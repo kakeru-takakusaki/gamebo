@@ -9,7 +9,7 @@
   height: calc(100vh - 50px);
 
   .chat-header {
-    background-color: rgb(99, 99, 99);
+    background-color: #848a96;
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -27,6 +27,7 @@
 
 
   .messages {
+    background-color: #9aadbe;
     height: calc(100vh - 50px - 60px - 60px);
     padding: 0px 10px;
     overflow: scroll;
@@ -115,7 +116,7 @@
 
 
   .form {
-    background-color: rgb(99, 99, 99);
+    background-color: #848a96;
     height: 60px;
     padding: 15px 30px;
     display: flex;
