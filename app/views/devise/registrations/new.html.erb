@@ -1,6 +1,6 @@
 <%= render 'shared/signup_header' %>
 
-<%= form_with model: @user, url: user_registration_path, class: 'user-registration', local: true do |f| %>
+<%= form_with model: @user, url: user_registration_path, class: 'user-registration' do |f| %>
   <h2>新規登録</h2>
   <%= render 'shared/error_messages', model: f.object %>
 
