@@ -1,0 +1,24 @@
+<%= render "shared/header" %>
+
+<div class='content'>
+  <%= render "shared/side_bar" %>
+  <div class='main'>
+    <%= link_to 'ステータスを編集する', edit_user_path(current_user) %>
+    <div class='upper-user-page-icon'>
+      <% if @user.image.attached? %>
+        <div class='div-user-page-icon'>
+          <%= image_tag @user.image.variant(resize: '300x300') %>
+        </div>
+      <% else %>
+        <div class='div-user-page-icon'>
+          <i class="far fa-user"></i>
+        </div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= @user.nickname %>
+      <%= @user.profile_text %>
+    </div>
+  </div>
+</div>
