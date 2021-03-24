@@ -66,6 +66,8 @@
   height: calc(100vh - 50px);
   padding: 0 20px;
   overflow: scroll;
+  position: relative;
+
   .new-room {
     display: inline-block;
     padding: 10px 10px;
@@ -79,12 +81,38 @@
       color: white;
     }
   }
-}
+
+  .new-room-div {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
 
 
-.hidden {
-  display: none;
+    .new-room-label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+
+      .new-room-image {
+        background-color: #546474;
+        border: 2px solid whitesmoke;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
 }
+
 
 
 // ログイン・新規登録のCSS
