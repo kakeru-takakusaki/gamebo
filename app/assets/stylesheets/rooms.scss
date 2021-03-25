@@ -13,6 +13,11 @@
   width: calc(100vw - 230px);
   height: calc(100vh - 50px);
 
+  .select-div {
+    display: flex;
+    justify-content: center;
+  }
+
   .create-room-page-div {
     text-align: center;
     display: flex;
@@ -45,11 +50,36 @@
       }
 
       .create-room-input-member {
-        font-size: 17px;
-        height: 28px;
-        width: 35vw;
-        resize: none;
+        // font-size: 17px;
+        // height: 28px;
+        // width: 35vw;
+        // resize: none;
+        // outline: none;
+      }
+
+      .plus {
+        display: inline-block;
+        text-decoration: none;
         outline: none;
+        font-size: 22px;
+        text-align: center;
+        cursor: pointer;
+        background-color: #5fbbce;
+        color: #5fbbce;
+        height: 28px;
+        width: 28px;
+        box-shadow    : 4px 4px 3px #666666;
+        border-bottom: 2px solid #118e9e;
+        border-radius: 4px;
+        font-weight: bold;
+        text-shadow: -1px -1px rgba(255, 255, 255, 0.9), 1px 1px rgba(0, 0, 0, 0.9);
+        transition    : .3s;
+      }
+
+      .plus:hover {
+        box-shadow: none;
+        border-bottom: solid 2px #00BCD4;
+        text-shadow: -1px -1px rgba(255, 255, 255, 0.5), 1px 1px rgba(0, 0, 0, 0.5);
       }
 
       .create-room-btn {
@@ -73,6 +103,15 @@
         color         : #7f7f7f;     /* 背景色     */
         background    : #ffffff;     /* 文字色     */
       }
+    }
+
+    .add-select {
+      width: calc(100vw - 230px);
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
     }
   }
 }
