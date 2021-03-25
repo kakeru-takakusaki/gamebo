@@ -49,38 +49,38 @@
         outline: none;
       }
 
-      .create-room-input-member {
+      // .create-room-input-member {
         // font-size: 17px;
         // height: 28px;
         // width: 35vw;
         // resize: none;
         // outline: none;
-      }
+      // }
 
-      .plus {
-        display: inline-block;
-        text-decoration: none;
-        outline: none;
-        font-size: 22px;
-        text-align: center;
-        cursor: pointer;
-        background-color: #5fbbce;
-        color: #5fbbce;
-        height: 28px;
-        width: 28px;
-        box-shadow    : 4px 4px 3px #666666;
-        border-bottom: 2px solid #118e9e;
-        border-radius: 4px;
-        font-weight: bold;
-        text-shadow: -1px -1px rgba(255, 255, 255, 0.9), 1px 1px rgba(0, 0, 0, 0.9);
-        transition    : .3s;
-      }
+      // .plus {
+      //   display: inline-block;
+      //   text-decoration: none;
+      //   outline: none;
+      //   font-size: 22px;
+      //   text-align: center;
+      //   cursor: pointer;
+      //   background-color: #5fbbce;
+      //   color: #5fbbce;
+      //   height: 28px;
+      //   width: 28px;
+      //   box-shadow    : 4px 4px 3px #666666;
+      //   border-bottom: 2px solid #118e9e;
+      //   border-radius: 4px;
+      //   font-weight: bold;
+      //   text-shadow: -1px -1px rgba(255, 255, 255, 0.9), 1px 1px rgba(0, 0, 0, 0.9);
+      //   transition    : .3s;
+      // }
 
-      .plus:hover {
-        box-shadow: none;
-        border-bottom: solid 2px #00BCD4;
-        text-shadow: -1px -1px rgba(255, 255, 255, 0.5), 1px 1px rgba(0, 0, 0, 0.5);
-      }
+      // .plus:hover {
+      //   box-shadow: none;
+      //   border-bottom: solid 2px #00BCD4;
+      //   text-shadow: -1px -1px rgba(255, 255, 255, 0.5), 1px 1px rgba(0, 0, 0, 0.5);
+      // }
 
       .create-room-btn {
         display       : inline-block;
@@ -96,6 +96,7 @@
         box-shadow    : 4px 4px 3px #666666;  /* 影の設定 */
         border        : 2px solid #7f7f7f;    /* 枠の指定 */
         margin-bottom: 30px;
+        font-weight: bold;
       }
 
       .create-room-btn:hover {
@@ -105,13 +106,54 @@
       }
     }
 
-    .add-select {
-      width: calc(100vw - 230px);
-      text-align: center;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-direction: column;
+    .box-div {
+      background-color: white;
+      width: 35vw;
+      max-height: 400px;
+      overflow: scroll;
+
+      h3 {
+        background-color: #848a96;
+        color: whitesmoke;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .check-label-div {
+        border: 2px solid #4a4c4e;
+        display: flex;
+        align-items: center;
+        background    : #7f7f7f;
+        transition: .5s;
+
+        .check-box {
+          width: 15%;
+        }
+
+        .check-member-icon {
+          width: 60px;
+          height: 60px;
+          border: 2px solid whitesmoke;
+          background-color: white;
+          border-radius: 50%;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 10px 0;
+        }
+
+        .check-user-name {
+          font-size: 17px;
+          margin-left: 5%;
+          color: whitesmoke;
+          font-weight: bold;
+        }
+      }
+
+      .check-label-div:hover {
+        background-color: rgb(196, 196, 196);
+      }
     }
   }
 }

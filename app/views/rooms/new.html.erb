@@ -15,18 +15,26 @@
         <div><%= f.text_field :name, class: 'create-room-input-name' %></div>
       </div>
 
-      <div class='create-room-div select-div'>
-        <select name="room[user_ids][]" class='create-room-input-member' id='select-member' style='font-size: 17px; height: 28px; width: 35vw; resize: none; outline: none; display: block;'>
-          <option value="">メンバーを選択してください</option>
-          <% User.where.not(id: current_user.id).each do |user| %>
-          <option value=<%= user.id %><%= user.nickname %></option>
-          <% end %> 
-        </select>
+      <div class='create-room-div box-div'>
+        <h3>メンバーを選択</h3>
+        <% User.where.not(id: current_user.id).each do |user| %>
+          <label class='check-label-div'>
+            <input type='checkbox' class='check-box' name='room[user_ids][]' value=<%= user.id %>>
+            <div class='check-member-icon'>
+              <% if user.image.attached? %>
+                <%= image_tag user.image.variant(resize: '60x60') %>
+              <% else %>
+                <i class="far fa-user user-icon-i fa-3x"></i>
+              <% end %>
+            </div>
+            <div class='check-user-name'>
+              <%= user.nickname %>
+            </div>
+          </label>
+        <% end %>
         <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
-        <button class='plus' id='plus'>+</button>
+        <%# <button class='plus' id='plus'>+</button> %>
       </div>
-
-      <div id='add-select'></div>
 
       <div class='create-room-div'>
         <div><%= f.submit class: 'create-room-btn' %></div>
