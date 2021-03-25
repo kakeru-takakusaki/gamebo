@@ -1,25 +1,35 @@
 <%= render "shared/header" %>
 
-<div>
-  <h1>チャットルーム作成</h1>
-  <%= form_with model: @room, local: true do |f| %>
-    <div>
-      <div><%= f.label :ルーム名 %></div>
-      <div><%= f.text_field :name %></div>
-    </div>
+<div class='content'>
+  <%= render "shared/side_bar" %>
+  <div class='create-room-main'>
+    <div class='create-room-page-div'>
+      <div class='create-room-div'>
+        <h2>チャットルーム作成</h2>
+      </div>
+      
+      <div class='create-room-div'>
+      <%= form_with model: @room do |f| %>
+      <%= render 'shared/error_messages', model: f.object %>
+        <div><%= f.label :ルーム名, class: 'create-room-label' %></div>
+        <div><%= f.text_field :name, class: 'create-room-input-name' %></div>
+      </div>
 
-    <div>
-      <select name="room[user_ids][]">
-        <option value="">選択してください</option>
-        <% User.where.not(id: current_user.id).each do |user| %>
-          <option value=<%= user.id %>><%= user.nickname %></option>
-        <% end %>
-      </select>
-      <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
-    </div>
+      <div class='create-room-div'>
+        <select name="room[user_ids][]" class='create-room-input-member' >
+          <option value="">選択してください</option>
+          <% User.where.not(id: current_user.id).each do |user| %>
+            <option value=<%= user.id %>><%= user.nickname %></option>
+          <% end %>
+        </select>
+        <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+      </div>
 
-    <div>
-      <div><%= f.submit %></div>
+      <div class='create-room-div'>
+        <div><%= f.submit class: 'create-room-btn' %></div>
+      <% end %>
+      </div>
+      
     </div>
-  <% end %>
+  </div>
 </div>

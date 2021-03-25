@@ -5,3 +5,74 @@
 .field_with_errors {
   display: contents;
 }
+
+// rooms#newのcss
+
+.create-room-main {
+  background-color: #848a96;
+  width: calc(100vw - 230px);
+  height: calc(100vh - 50px);
+
+  .create-room-page-div {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 50px);
+
+    .create-room-div {
+      width: calc(100vw - 230px);
+
+      h2 {
+        font-size: 27px;
+        color: white;
+        font-weight: bold;
+      }
+
+      .create-room-label {
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .create-room-input-name {
+        font-size: 17px;
+        height: 28px;
+        width: 35vw;
+        resize: none;
+        outline: none;
+      }
+
+      .create-room-input-member {
+        font-size: 17px;
+        height: 28px;
+        width: 35vw;
+        resize: none;
+        outline: none;
+      }
+
+      .create-room-btn {
+        display       : inline-block;
+        border-radius : 5%;          /* 角丸       */
+        font-size     : 18px;        /* 文字サイズ */
+        text-align    : center;      /* 文字位置   */
+        cursor        : pointer;     /* カーソル   */
+        padding       : 10px 9px;   /* 余白       */
+        background    : #7f7f7f;     /* 背景色     */
+        color         : #ffffff;     /* 文字色     */
+        line-height   : 1em;         /* 1行の高さ  */
+        transition    : .3s;         /* なめらか変化 */
+        box-shadow    : 4px 4px 3px #666666;  /* 影の設定 */
+        border        : 2px solid #7f7f7f;    /* 枠の指定 */
+        margin-bottom: 30px;
+      }
+
+      .create-room-btn:hover {
+        box-shadow    : none;        /* カーソル時の影消去 */
+        color         : #7f7f7f;     /* 背景色     */
+        background    : #ffffff;     /* 文字色     */
+      }
+    }
+  }
+}
