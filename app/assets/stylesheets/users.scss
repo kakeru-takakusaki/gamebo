@@ -1,3 +1,28 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main {
+  background-color: #848a96;
+  width: calc(100vw - 230px);
+
+  .upper-user-page-icon {
+    width: calc(100vw - 230px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// ユーザーアイコン
+.div-user-page-icon {
+  height: 200px;
+  width: 200px;
+  border: 3px solid whitesmoke;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

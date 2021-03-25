@@ -3,5 +3,11 @@
 <div class='content'>
   <%= render "shared/side_bar" %>
   <div class='main'>
+    <div class='users-div'>
+      <% User.where.not(id: current_user.id).each do |user| %>
+        <div class='users-icon'></div>
+        <div class='users-profiles'><%= user.nickname %></div>
+      <% end %>
+    </div>
   </div>
 </div>
