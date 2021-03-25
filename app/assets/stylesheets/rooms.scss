@@ -44,7 +44,7 @@
       .create-room-input-name {
         font-size: 17px;
         height: 28px;
-        width: 35vw;
+        width: 40vw;
         resize: none;
         outline: none;
       }
@@ -108,15 +108,17 @@
 
     .box-div {
       background-color: white;
-      width: 35vw;
+      width: 40vw;
       max-height: 400px;
       overflow: scroll;
+      margin: 30px auto;
 
       h3 {
         background-color: #848a96;
         color: whitesmoke;
         font-size: 20px;
         font-weight: bold;
+        border: 2px solid #4a4c4e;
       }
 
       .check-label-div {
@@ -156,6 +158,7 @@
         cursor: pointer;
         user-select: none;
       }
+
     }
   }
 }

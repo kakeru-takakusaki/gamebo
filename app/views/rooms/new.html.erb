@@ -1,16 +1,16 @@
 <%= render "shared/header" %>
 
-<div class='content' data-no-turbolinks>
+<div class='content'>
   <%= render "shared/side_bar" %>
   <div class='create-room-main'>
     <div class='create-room-page-div'>
       <div class='create-room-div'>
         <h2>チャットルーム作成</h2>
       </div>
-      
-      <div class='create-room-div'>
       <%= form_with model: @room do |f| %>
-      <%= render 'shared/error_messages', model: f.object %>
+      <div class='create-room-div'>
+      
+        <%= render 'shared/error_messages', model: f.object %>
         <div><%= f.label :チャットルーム名, class: 'create-room-label' %></div>
         <div><%= f.text_field :name, class: 'create-room-input-name' %></div>
       </div>
@@ -38,9 +38,9 @@
 
       <div class='create-room-div'>
         <div><%= f.submit class: 'create-room-btn' %></div>
-      <% end %>
-      </div>
       
+      </div>
+      <% end %>
     </div>
   </div>
 </div>
