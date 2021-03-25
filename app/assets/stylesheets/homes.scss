@@ -174,6 +174,7 @@
     outline: none;
     color: white;
     height: 15px;
+    font-weight: bold;
   }
   .log-sign:hover {
     color: lightblue;
@@ -189,10 +190,17 @@
 
   h2 {
     color: white;
+    font-weight: bold;
+    font-size: 27px;
   }
 
   .form-text-wrap {
     color: white;
+
+    .form-text {
+      margin-right: 7px;
+      font-weight: bold;
+    }
   }
 
   .input-default {
@@ -201,5 +209,27 @@
     width: 35vw;
     resize: none;
     outline: none;
+  }
+
+  .sign-btn {
+    display       : inline-block;
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 18px;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 10px 9px;   /* 余白       */
+    background    : #7f7f7f;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    transition    : .3s;         /* なめらか変化 */
+    box-shadow    : 4px 4px 3px #666666;  /* 影の設定 */
+    border        : 2px solid #7f7f7f;    /* 枠の指定 */
+    margin-bottom: 30px;
+  }
+
+  .sign-btn:hover {
+    box-shadow    : none;        /* カーソル時の影消去 */
+    color         : #7f7f7f;     /* 背景色     */
+    background    : #ffffff;     /* 文字色     */
   }
 }

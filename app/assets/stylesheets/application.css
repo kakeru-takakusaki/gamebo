@@ -26,3 +26,8 @@ body{
 .hidden {
   display: none;
 }
+
+.red {
+  color: #f00;
+  font-weight: normal;
+}
