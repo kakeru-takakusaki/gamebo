@@ -9,7 +9,7 @@
       </div>
       
       <div class='create-room-div'>
-      <%= form_with model: @room, local: true do |f| %>
+      <%= form_with model: @room do |f| %>
       <%= render 'shared/error_messages', model: f.object %>
         <div><%= f.label :チャットルーム名, class: 'create-room-label' %></div>
         <div><%= f.text_field :name, class: 'create-room-input-name' %></div>
