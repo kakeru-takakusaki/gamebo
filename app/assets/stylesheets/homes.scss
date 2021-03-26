@@ -138,6 +138,60 @@
   }
 }
 
+.homes-index-div {
+  background-color: #848a96;
+  width: calc(100vw - 230px);
+  height: 100vh;
+  overflow: scroll;
+
+  .users-div {
+    height: 20vh;
+    width: calc(100vw - 230px);
+    border-top: 3px solid #848a96;
+    border-bottom: 3px solid #848a96;
+    border-right: 6px solid #848a96;
+    border-left: 6px solid #848a96;
+    display: flex;
+    background-color: #7f7f7f;
+
+
+    .homes-member-icon {
+      width: 15vh;
+      height: 15vh;
+      border: 2px solid whitesmoke;
+      background-color: white;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto 20px;
+    }
+
+    .homes-name-text {
+      width: 50vw;
+      .homes-name {
+        font-size: 4vh;
+        font-weight: bold;
+        height: 35%;
+        display: flex;
+        align-items: center;
+        a {
+          color: whitesmoke;
+          text-decoration: none;
+        }
+        a:hover {
+          cursor: pointer;
+        }
+      }
+      .homes-text {
+        color: whitesmoke;
+        font-size: 2.2vh;
+        font-weight: bold;
+      }
+    }
+  }
+}
 
 
 // ログイン・新規登録のCSS

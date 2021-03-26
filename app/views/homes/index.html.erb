@@ -2,12 +2,22 @@
 
 <div class='content'>
   <%= render "shared/side_bar" %>
-  <div class='main'>
-    <div class='users-div'>
-      <% User.where.not(id: current_user.id).each do |user| %>
-        <div class='users-icon'></div>
-        <div class='users-profiles'><%= user.nickname %></div>
-      <% end %>
-    </div>
+  <div class='homes-index-div'>
+    <% User.where.not(id: current_user.id).each do |user| %>
+      <div class='users-div'>
+        <div class='homes-member-icon'>
+          <% if user.image.attached? %>
+            <%= image_tag user.image.variant(resize: '200x200') %>
+          <% else %>
+            <i class="far fa-user user-icon-i fa-5x"></i>
+          <% end %>
+        </div>
+
+        <div class='homes-name-text' >
+          <div class='homes-name'><%= link_to user.nickname, user_path(user.id) %></div>
+          <div class='homes-text'><%= user.profile_text %></div>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
