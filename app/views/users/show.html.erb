@@ -3,7 +3,7 @@
 <div class='content'>
   <%= render "shared/side_bar" %>
   <div class='main'>
-    <%= link_to 'ステータスを編集する', edit_user_path(current_user) %>
+    <%= link_to 'ステータスを編集する', edit_user_path(current_user), class: 'user-edit-a' %>
     <div class='upper-user-page-icon'>
       <% if @user.image.attached? %>
         <div class='div-user-page-icon'>
@@ -11,14 +11,12 @@
         </div>
       <% else %>
         <div class='div-user-page-icon'>
-          <i class="far fa-user"></i>
+          <i class="far fa-user normal-icon"></i>
         </div>
       <% end %>
     </div>
 
-    <div>
-      <%= @user.nickname %>
-      <%= @user.profile_text %>
-    </div>
+    <div class='user-name'><%= @user.nickname %></div>
+    <div class='user-text'><%= @user.profile_text %></div>
   </div>
 </div>
