@@ -3,7 +3,9 @@
 <div class='content'>
   <%= render "shared/side_bar" %>
   <div class='main'>
+    <% if current_user.id == @user.id %>
     <%= link_to 'ステータスを編集する', edit_user_path(current_user), class: 'user-edit-a' %>
+    <% end %>
     <div class='upper-user-page-icon'>
       <% if @user.image.attached? %>
         <div class='div-user-page-icon'>
