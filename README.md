@@ -6,6 +6,7 @@ Gamebo（ゲムボ）
 ユーザー同士でチャット機能を使い、プレイする時間の相談やゲームのID交換などを可能にしています。
 
 # URL
+https://gamebo-app.herokuapp.com/
 
 # テスト用アカウント
 
