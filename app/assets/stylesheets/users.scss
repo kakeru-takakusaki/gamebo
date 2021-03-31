@@ -65,10 +65,24 @@
   width: calc(100vw - 230px);
 
   .edit-element {
-    width: 35%;
+    width: 40%;
     margin: 15px 0;
     display: flex;
     justify-content: center;
+    .f {
+      resize: none;
+      outline: none;
+      font-size: 18px;
+    }
+    .edit-nickname {
+      width: 100%;
+    }
+    .edit-image {
+      width: 100%;
+    }
+    .edit-profile {
+      width: 100%;
+    }
     .edit-btn {
       border: 2px solid #7f7f7f;
       border-radius: 5%;

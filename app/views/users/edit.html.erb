@@ -5,9 +5,9 @@
   <div class='main'>
     <%= form_with model: @user do |f| %>
     <div class='edit-div'>
-      <div class='edit-element'><%= f.text_field :nickname, placeholder: 'ニックネーム' %></div>
-      <div class='edit-element'><%= f.file_field :image %></div>
-      <div class='edit-element'><%= f.text_area :profile_text %></div>
+      <div class='edit-element'><%= f.text_field :nickname, class: 'edit-nickname f', placeholder: 'ニックネーム' %></div>
+      <div class='edit-element'><%= f.file_field :image, class: 'edit-image f' %></div>
+      <div class='edit-element'><%= f.text_area :profile_text, class: 'edit-profile f' %></div>
       <div class='edit-element'><%= f.submit '保存', class: 'edit-btn' %></div>
     </div>
     <% end %>
