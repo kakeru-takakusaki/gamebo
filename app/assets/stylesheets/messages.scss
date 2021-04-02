@@ -21,11 +21,36 @@
       font-weight: bold;
     }
 
-    .chat-header-button {
+    .chat-menu-div {
       margin-top: 15px;
       margin-right: 10px;
       color: white;
       font-weight: bold;
+      width: 100px;
+      .chat-list-ul {
+        border: 1px solid red;
+        text-align: end;
+        .drop-menu {
+          width: 100%;
+          i {
+            font-size: 25px;
+            margin-right: 20px;
+          }
+          .drop-element {
+            width: 100%;
+            display: none;
+            li {
+              a {
+                text-decoration: none;
+                color: white;
+              }
+              a:hover {
+                color: lightskyblue;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
