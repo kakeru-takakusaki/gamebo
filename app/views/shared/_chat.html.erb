@@ -2,12 +2,15 @@
   <div class='chat-header-title'>
     <%= @room.name %>
   </div>
-  <div class='chat-header-button'>
-    <ul id='chat-header-list-button'><li class='puldown'><i class="fas fa-list"></i>
-      <ul>
-        <li><%= link_to "チャットルームを閉じる", room_path(@room), method: :delete %></li>
-      </ul>
-    </li></ul>
+  <div class='chat-menu-div'>
+    <ul class='chat-list-ul'>
+      <li class='drop-menu'>
+        <i class="fas fa-list drop-menu-btn"></i>
+        <ul class='drop-element'>
+          <li><%= link_to "ルームを削除", room_path(@room), method: :delete %></li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </div>
 
