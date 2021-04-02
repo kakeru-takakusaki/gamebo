@@ -3,8 +3,11 @@
     <%= @room.name %>
   </div>
   <div class='chat-header-button'>
-    <i class="fas fa-list"></i>
-    <%# <%= link_to "チャットルームを閉じる", room_path(@room), method: :delete %>
+    <ul id='chat-header-list-button'><li class='puldown'><i class="fas fa-list"></i>
+      <ul>
+        <li><%= link_to "チャットルームを閉じる", room_path(@room), method: :delete %></li>
+      </ul>
+    </li></ul>
   </div>
 </div>
 
