@@ -4,6 +4,7 @@ FactoryBot.define do
     email {Faker::Internet.free_email}
     password {'test1234'}
     password_confirmation {password}
-    profile_text {Faker::String.random(length: 10..100)}
+    # 新規登録時には必要ないためコメントアウト
+    # profile_text {Faker::String.random(length: 10..100)}
   end
 end
