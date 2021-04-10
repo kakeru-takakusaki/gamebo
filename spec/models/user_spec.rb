@@ -13,7 +13,11 @@ RSpec.describe User, type: :model do
     end
 
     context '保存できない場合' do
-      
+      it 'ニックネームが必須であること' do
+        @user.nickname = ''
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Nickname can't be blank")
+      end
     end
 
   end
