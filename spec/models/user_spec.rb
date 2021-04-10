@@ -12,5 +12,9 @@ RSpec.describe User, type: :model do
       end
     end
 
+    context '保存できない場合' do
+      
+    end
+
   end
 end
