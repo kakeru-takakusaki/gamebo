@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  with_options presence: true do
+  with_options presence: { message: "can't be blank" } do
     validates :nickname,      uniqueness: true
   end
 
