@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   with_options presence: { message: "can't be blank" } do
-    validates :nickname,      uniqueness: true
+    validates :nickname,      uniqueness: { message: "has already been taken"}
   end
 
   has_many :room_users
