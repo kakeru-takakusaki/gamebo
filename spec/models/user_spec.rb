@@ -42,6 +42,12 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("Password can't be blank")
       end
+      it "パスワードとパスワード（確認用）は、値の一致が必須であること" do
+        @user.password = "test123"
+        @user.password_confirmation = "sample123"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
+      end
     end
 
   end
