@@ -28,7 +28,7 @@ RSpec.describe User, type: :model do
       it "メールアドレスが必須であること" do
         @user.email = ""
         @user.valid?
-        expect(@user.errors.full_messages).to include("")
+        expect(@user.errors.full_messages).to include("Email can't be blank")
       end
       it "メールアドレスが一意性であること" do
         @user.save
