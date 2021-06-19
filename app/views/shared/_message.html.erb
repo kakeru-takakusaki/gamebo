@@ -11,7 +11,7 @@
       </div>
     </div>
   <% end %>
-  <a href=/rails/active_storage/blobs/user.id/image data-lightbox="image-1">
+  <a href=/rails/active_storage/blobs/user.id/image.name data-lightbox="image-1">
     <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image-right' if message.image.attached? %>
   </a>
 <% else %>
