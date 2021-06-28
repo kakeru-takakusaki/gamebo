@@ -11,7 +11,7 @@
       </div>
     </div>
   <% end %>
-  <%= link_to image_tag(@message.image.name), data-lightbox="image-1" %>
+  <%= link_to image_tag(messages.image.name), data-lightbox="image-1" %>
     <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image-right' if message.image.attached? %>
 <% else %>
   <% if message.text.present? %>
