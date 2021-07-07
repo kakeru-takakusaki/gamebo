@@ -11,6 +11,7 @@
       </div>
     </div>
   <% end %>
+  <a href="images/close.png" data-lightbox="image-1" data-title="キャプション">拡大画像を表示</a>
   <a href="images/close.png" data-lightbox="test-image" data-title="キャプション"><%= image_tag message.image.variant(resize: '300x300'), if message.image.attached? %></a>
   <%# <%= link_to image_tag(messages.image.name), data-lightbox="image-1" if message.image.attached? %> %>
     <%= link_to image_tag message.image.variant(resize: '400x400'), class: 'message-image-right' if message.image.attached? %>
