@@ -13,7 +13,7 @@
   <% end %>
     <%= link_to "publicdomainq-0022995sdv",'/assets/publicdomainq-0022995sdv.jpg',:rel => "lightbox"%>
   <%# <%= link_to image_tag(messages.image.name), data-lightbox="image-1" if message.image.attached? %> %>
-    <%= link_to image_tag message.image.variant(resize: '400x400'), 'assets/message.image', class: 'message-image-right', :rel => "lightbox" if message.image.attached? %>
+    <%= link_to image_tag message.image.variant(resize: '400x400'), message.image, class: 'message-image-right', :rel => "lightbox" if message.image.attached? %>
 <% else %>
   <% if message.text.present? %>
     <div class="message message-left">
