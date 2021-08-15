@@ -38,5 +38,5 @@
       </div>
     </div>
   <% end %>
-  <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image-left' if message.image.attached? %>
+  <%= link_to image_tag message.image.variant(resize: '400x400'), class: 'message-image-left' if message.image.attached? %>
 <% end %>
