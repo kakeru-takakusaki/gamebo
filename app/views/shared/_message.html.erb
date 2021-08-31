@@ -11,7 +11,7 @@
       </div>
     </div>
   <% end %>
-  <%= link_to image_tag message.image.variant(resize: '400x400'), message.image, class: 'message-image-right', :rel => "lightbox" if message.image.attached? %>
+  <%= link_to image_tag message.image.variant(resize: '400x400'), message.user.image, class: 'message-image-right', :rel => "lightbox" if message.image.attached? %>
 <% else %>
   <% if message.text.present? %>
     <div class="message message-left">
